@@ -1,0 +1,38 @@
+{
+   "action": {
+      "default_icon": {
+         "128": "assets/images/icon_128.png",
+         "32": "assets/images/icon_32.png"
+      },
+      "default_popup": "popup/popup.html",
+      "default_title": "Solve ReCaptchas"
+   },
+   "background": {
+      "service_worker": "service_worker.js"
+   },
+   "content_scripts": [ {
+      "all_frames": true,
+      "css": [ "content/style.css" ],
+      "js": [ "vendor/jquery/3.5.1/jquery.min.js", "common/config.js", "content/core_helpers.js", "content/script.js", "content/captcha/recaptcha/processor.js" ],
+      "matches": [ "\u003Call_urls>" ],
+      "run_at": "document_start"
+   } ],
+   "content_security_policy": {
+      "extension_pages": "script-src 'self'; object-src 'self'"
+   },
+   "default_locale": "en",
+   "description": "__MSG_extention_description__",
+   "icons": {
+      "128": "assets/images/icon_128.png",
+      "32": "assets/images/icon_32.png"
+   }, 
+   "manifest_version": 3,
+   "name": "__MSG_extension_name__",
+   "permissions": [ "storage" ],
+   "short_name": "__MSG_extension_short_name__", 
+   "version": "1.0.14",
+   "web_accessible_resources": [ {
+      "matches": [ "\u003Call_urls>" ],
+      "resources": [ "assets/images/*", "content/*" ]
+   } ]
+}

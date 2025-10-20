@@ -1,0 +1,49 @@
+{
+   "accountSuccessfullyConnected": {
+      "message": "Account Successfully Connected"
+   },
+   "apiKey": {
+      "message": "Enter API Key"
+   },
+   "connect": {
+      "message": "Connection"
+   },
+   "createAccountToGetIt": {
+      "message": "\u003Ca href=\"#\" data-lang-link=\"$link$\" target=\"_blank\">Create an account\u003C/a> to get an API key",
+      "placeholders": {
+         "link": {
+            "content": "$1"
+         }
+      }
+   },
+   "enabledSolveAutomaticallyOff": {
+      "message": "\u003Cstrong>Disabled\u003C/strong>"
+   },
+   "enabledSolveAutomaticallyOn": {
+      "message": "\u003Cstrong>Enabled\u003C/strong>"
+   },
+   "extention_description": {
+      "message": "An extension to automatically solve any type of reCAPTCHAs."
+   },
+   "extension_name": {
+      "message": "Solve reCAPTCHAs"
+   },
+   "extension_short_name": {
+      "message": "Solve reCAPTCHAs"
+   },
+   "logout": {
+      "message": "Logout"
+   },
+   "solveWithSolveReCaptchas": {
+      "message": "Solving with Solve reCAPTCHAs"
+   },
+   "solved": {
+      "message": "Success: reCAPTCHA Solved"
+   },
+   "error": {
+      "message": "Error: reCAPTCHA Unsolvable"
+   },   
+   "solving": {
+      "message": "Please Wait: Solving"
+   }
+}
