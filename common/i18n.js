@@ -1,6 +1,3 @@
-/*
- * Translate text elements
- */
 $("[data-lang]").each(function() {
     let el = $(this);
 
@@ -25,9 +22,6 @@ $("[data-lang]").each(function() {
     el.html(message);
 });
 
-/*
- * Translate links
- */
 $("[data-lang-link]").each(function() {
     let el = $(this);
 

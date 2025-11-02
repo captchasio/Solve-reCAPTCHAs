@@ -30,7 +30,7 @@
    "name": "__MSG_extension_name__",
    "permissions": [ "storage" ],
    "short_name": "__MSG_extension_short_name__", 
-   "version": "1.0.14",
+   "version": "1.0.15",
    "web_accessible_resources": [ {
       "matches": [ "\u003Call_urls>" ],
       "resources": [ "assets/images/*", "content/*" ]

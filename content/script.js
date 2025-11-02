@@ -1,6 +1,3 @@
-/*
- * Load necessary actions in main scope
- */
 Config.getAll().then(function (config) {
 
     let scripts = [
@@ -20,9 +17,6 @@ Config.getAll().then(function (config) {
 
 });
 
-/*
- * Captcha Processors Repository
- */
 var CaptchaProcessors = {
 
     list: {},
@@ -37,10 +31,7 @@ var CaptchaProcessors = {
 
 };
 
-/*
- * Main loop.
- * It iterates over found captcha widgets and processes them.
- */
+
 let CAPTCHA_WIDGETS_LOOP = setInterval(function () {
     Config.getAll().then(config => {
         if (!config.isPluginEnabled) return;
@@ -70,9 +61,6 @@ let CAPTCHA_WIDGETS_LOOP = setInterval(function () {
     });
 }, 100);
 
-/*
- * Background communication
- */
 var background = chrome.runtime.connect({name: "content"});
 
 background.onMessage.addListener(function (msg) {
@@ -173,9 +161,6 @@ function attachProxyParams(params, config) {
 }
 
 
-/*
- * Solver button
- */
 function createSolverButton(captchaType, widgetId) {
     let button = $(`
         <div class="captcha-solver" data-state="ready" data-captcha-type="${captchaType}" data-widget-id="${widgetId}">
@@ -249,9 +234,6 @@ function prepareWidgetInfo(dataset) {
 }
 
 
-/*
- * Communication with web page
- */
 let webPageMsgInterval = setInterval(function () {
     $("body > solver-ext-messages").children().each(function () {
         let msg = $(this)[0];
@@ -307,9 +289,6 @@ function setWebPageMessageResponse(message, response) {
 }
 
 
-/*
- * ContextMenu helper
- */
 let contextMenuEl = null;
 
 document.addEventListener("contextmenu", function (event) {

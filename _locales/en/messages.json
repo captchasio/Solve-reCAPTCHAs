@@ -9,7 +9,7 @@
       "message": "Connection"
    },
    "createAccountToGetIt": {
-      "message": "\u003Ca href=\"#\" data-lang-link=\"$link$\" target=\"_blank\">Create an account\u003C/a> to get an API key",
+      "message": "\u003Ca href=\"#\" data-lang-link=\"$link$\" target=\"_blank\">Create an account\u003C/a> for your API key!",
       "placeholders": {
          "link": {
             "content": "$1"

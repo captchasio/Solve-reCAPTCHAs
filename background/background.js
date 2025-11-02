@@ -19,38 +19,22 @@ function initApiClient(apiKey) {
     });
 }
 
-/*
- * Manage message passing
- */
 chrome.runtime.onConnect.addListener(function(port) {
-
-    //console.log(port.name + ' connected');
-    //console.log(port);
-
     port.onMessage.addListener(function (msg) {
-        //console.log(port.name + ' send message: ', msg);
-
         let messageHandler = port.name + '_' + msg.action;
 
         if (self[messageHandler] === undefined) return;
 
         self[messageHandler](msg)
             .then((response) => {
-                //console.log('response to [' + messageHandler + ']: ', response);
                 port.postMessage({action: msg.action, request: msg, response});
             })
             .catch(error => {
-                //console.log('return error to [' + messageHandler + ']: ', error.message);
                 port.postMessage({action: msg.action, request: msg, error: error.message});
             });
     });
 
 });
-
-
-/*
- * Message handlers
- */
 
 async function popup_login(msg) {
     initApiClient(msg.apiKey);

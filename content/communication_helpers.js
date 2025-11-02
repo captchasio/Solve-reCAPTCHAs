@@ -36,9 +36,6 @@ window.sendMsgToSolverCS = function(action, data) {
     });
 }
 
-/*
- * Execute callbacks
- */
 setInterval(function() {
     let textarea = document.querySelector('textarea[id=solverecaptchas-callback-trigger]');
     if (textarea) {
@@ -49,9 +46,6 @@ setInterval(function() {
     }
 }, 5);
 
-/*
- * Execute autosubmit rules
- */
 setInterval(function() {
     let textarea = document.querySelector('textarea[id=solverecaptchas-autosubmit-code]');
     if (textarea) {

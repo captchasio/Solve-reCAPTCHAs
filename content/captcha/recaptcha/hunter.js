@@ -29,9 +29,6 @@
             bindedButtonId: null,
         };
 
-        /*
-         * Check if is badge
-         */
         let isBadge = false;
 
         mainLoop: for (let k1 in widget) {
@@ -46,9 +43,6 @@
         }
 
 
-        /*
-         * 1. Look for version
-         */
         if (isBadge) {
             info.version = "v3";
 
@@ -64,9 +58,6 @@
             }
         }
 
-        /*
-         * 2. Look for containerId
-         */
         let n1;
         for (let k in widget) {
             if (widget[k] && widget[k].nodeType) {
@@ -90,9 +81,6 @@
             }
         }
 
-        /*
-         * 3. Look for sitekey, action, s and callback
-         */
         for (let k1 in widget) {
             let obj = widget[k1];
 
@@ -124,9 +112,6 @@
             }
         }
 
-        /*
-         * 4. Prepare callback
-         */
         if (typeof info.callback === "function") {
             let callbackKey = "reCaptchaWidgetCallback" + widget.id;
             window[callbackKey] = info.callback;

@@ -1,17 +1,12 @@
 let initCoreHelpers = function () {
 
-    /*
-     * Create widgets container
-     */
     let widgetsList = document.querySelector('head > captcha-widgets');
     if ( ! widgetsList ) {
         widgetsList = document.createElement("captcha-widgets");
         document.head.appendChild(widgetsList);
     }
 
-    /*
-     * Widgets container helper
-     */
+
     window.registerCaptchaWidget = function(widgetInfo) {
         let widget = document.createElement("captcha-widget");
 
@@ -22,9 +17,6 @@ let initCoreHelpers = function () {
         widgetsList.appendChild(widget);
     };
 
-    /*
-     * Widgets container helper
-     */
     window.isCaptchaWidgetRegistered = function(captchaType, widgetId) {
         let widgets = widgetsList.children;
 
@@ -37,9 +29,6 @@ let initCoreHelpers = function () {
         return false;
     };
 
-    /*
-     * Widgets container helper
-     */
     window.resetCaptchaWidget = function(captchaType, widgetId) {
         let widgets = widgetsList.children;
 
@@ -53,9 +42,7 @@ let initCoreHelpers = function () {
         }
     };
 
-    /*
-     * Widgets container helper
-     */
+
     window.getCaptchaWidgetButton = function(captchaType, widgetId) {
         return document.querySelector(".captcha-solver[data-captcha-type='" + captchaType + "'][data-widget-id='" + widgetId + "']");
     };
