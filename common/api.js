@@ -9,9 +9,9 @@ class SolveReCaptchas {
             apiKey: "",
             service: "solverecaptchas.com",
             softId: 0,
-            defaultTimeout: 300,
-            recaptchaTimeout: 300,
-            pollingInterval: 5,
+            defaultTimeout: 3600,
+            recaptchaTimeout: 3600,
+            pollingInterval: 10,
         }
 
         for (let key in defaultOptions) {
